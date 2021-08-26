@@ -19,9 +19,12 @@ npm list -g --depth 0
 npm list
 pm2 update
 
-pm2 stop twilio_turn
-pm2 delete twilio_turn
-pm2 start twilio_turn
+pm2 stop token.js
+pm2 delete token.js
+
+export TWILIO_ACCOUNT_SID=AC9bafc5120505da761c3a764aef4fcb00
+
+pm2 start token.js
 
 echo "$(hostname)"
 
